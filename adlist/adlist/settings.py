@@ -143,7 +143,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Used for a default title
-APP_NAME = 'DJ4E Ads'   # Add
+APP_NAME = 'JoList'   # Add
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
@@ -174,6 +174,7 @@ INSTALLED_APPS = [
     'social_django',  # Add
     'home.apps.HomeConfig',  # Add - Common folder
     'ads.apps.AdsConfig',  # Add - Common folder
+
 ]
 
 # When we get to crispy forms :)
@@ -310,28 +311,3 @@ AUTHENTICATION_BACKENDS = (
 
 LOGOUT_REDIRECT_URL = '/'
 LOGIN_REDIRECT_URL = '/'
-
-# https://coderwall.com/p/uzhyca/quickly-setup-sql-query-logging-django
-# https://stackoverflow.com/questions/12027545/determine-if-django-is-running-under-the-development-server
-
-'''  # Leave off for now
-import sys
-if (len(sys.argv) >= 2 and sys.argv[1] == 'runserver'):
-    print('Running locally')
-    LOGGING = {
-        'version': 1,
-        'disable_existing_loggers': False,
-        'handlers': {
-            'console': {
-                'level': 'DEBUG',
-                'class': 'logging.StreamHandler',
-            }
-        },
-        'loggers': {
-            'django.db.backends': {
-                'handlers': ['console'],
-                'level': 'DEBUG',
-            },
-        }
-    }
-'''
